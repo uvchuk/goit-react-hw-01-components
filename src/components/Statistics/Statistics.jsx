@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Container, Item, List } from './Statistics.styled';
 
 export const Statistics = ({ title, stats }) => {
@@ -16,4 +17,15 @@ export const Statistics = ({ title, stats }) => {
       </List>
     </Container>
   );
+};
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    })
+  ),
 };

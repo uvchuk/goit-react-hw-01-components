@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Transaction } from '../Transaction/Transaction';
 import { Body, Container, Head } from './TransactionsHistory.styled';
 
@@ -16,4 +17,8 @@ export const TransactionsHistory = ({ transactions }) => {
       </Body>
     </Container>
   );
+};
+
+TransactionsHistory.propTypes = {
+  transactions: PropTypes.array,
 };
