@@ -1,11 +1,10 @@
-import friends from '../../friends.json';
 import { Container, Item, Marker } from './FriendList.styled';
-import { FriendListItem } from './FriendListItem';
+import { Friend } from '../Friend/Friend';
 
-export const FriendList = () => {
+export const FriendList = ({ friends }) => {
   return (
     <Container className="friend-list">
-      <FriendListItem friends={friends} item={Item} marker={Marker} />
+      <Friend friends={friends} item={Item} marker={Marker} />
     </Container>
   );
 };

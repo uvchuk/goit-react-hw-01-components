@@ -1,6 +1,6 @@
-import { Item, Marker } from './FriendList.styled';
+import { Item, Marker } from '../FriendList/FriendList.styled';
 
-export const FriendListItem = ({ friends }) => {
+export const Friend = ({ friends }) => {
   return friends.map(({ avatar, name, isOnline, id }) => {
     return (
       <Item key={id} className="item">
