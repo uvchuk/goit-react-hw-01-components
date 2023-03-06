@@ -4,7 +4,7 @@ import { Body, Container, Head } from './TransactionsHistory.styled';
 
 export const TransactionsHistory = ({ transactions }) => {
   return (
-    <Container className="transaction-history">
+    <Container>
       <Head>
         <tr>
           <th>Type</th>

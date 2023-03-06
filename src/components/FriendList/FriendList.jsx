@@ -4,7 +4,7 @@ import { Friend } from '../Friend/Friend';
 
 export const FriendList = ({ friends }) => {
   return (
-    <Container className="friend-list">
+    <Container>
       <Friend friends={friends} item={Item} marker={Marker} />
     </Container>
   );
