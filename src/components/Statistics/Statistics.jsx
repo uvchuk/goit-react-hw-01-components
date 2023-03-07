@@ -4,7 +4,7 @@ import { Container, Item, List } from './Statistics.styled';
 export const Statistics = ({ title, stats }) => {
   return (
     <Container>
-      <h2>{title}</h2>
+      {title && <h2>{title}</h2>}
       <List>
         {stats.map(({ id, label, percentage }) => {
           return (
@@ -23,9 +23,9 @@ Statistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string,
-      label: PropTypes.string,
-      percentage: PropTypes.number,
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
     })
   ),
 };
